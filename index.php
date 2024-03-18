@@ -52,20 +52,18 @@
 
     <h1>PHP Hotel List</h1>
     <?php
-    echo "<ul>";
-
+    
     foreach ($hotels as $hotel) {
-        echo "<li>";
-        echo "Nome: " . $hotel["name"] . "<br>";
-        echo "Descrizione: " . $hotel["description"] . "<br>";
-
-        // Do un operatore ternario per visualizzare bene la disponibilità del parcheggio
-        echo "Parcheggio: " . ($hotel['parking'] ? 'Disponibile' : 'Non Disponibile') . "<br>";
-        echo "Voto: " . $hotel["vote"] . "<br>";
-        echo "Distanza dal centro: " . $hotel["distance_to_center"] . " km";
-        echo "</li>";
+        echo '<div class="card" style="width: 18rem;">';
+        echo '<div class="card-header">' . $hotel['name'] . '</div>';
+        echo '<ul class="list-group list-group-flush">';
+        echo '<li class="list-group-item">Descrizione: ' . $hotel['description'] . '</li>';
+        echo '<li class="list-group-item">Parcheggio: ' . ($hotel['parking'] ? 'Disponibile' : 'Non disponibile') . '</li>';
+        echo '<li class="list-group-item">Voto: ' . $hotel['vote'] . '</li>';
+        echo '<li class="list-group-item">Distanza dal centro: ' . $hotel['distance_to_center'] . ' km</li>';
+        echo '</ul>';
+        echo '</div>';
     }
-    echo "</ul>"
 
     ?>
 

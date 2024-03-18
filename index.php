@@ -58,6 +58,8 @@
         echo "<li>";
         echo "Nome: " . $hotel["name"] . "<br>";
         echo "Descrizione: " . $hotel["description"] . "<br>";
+
+        // Do un operatore ternario per visualizzare bene la disponibilità del parcheggio
         echo "Parcheggio: " . ($hotel['parking'] ? 'Disponibile' : 'Non Disponibile') . "<br>";
         echo "Voto: " . $hotel["vote"] . "<br>";
         echo "Distanza dal centro: " . $hotel["distance_to_center"] . " km";

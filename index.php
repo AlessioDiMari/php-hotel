@@ -51,9 +51,12 @@
     ?>
 
     <h1>PHP Hotel List</h1>
+
     <?php
-    
+    echo '<div class="container p-4">';
+    echo '<div class="row">';
     foreach ($hotels as $hotel) {
+        echo '<div class="col-4 mb-4">';
         echo '<div class="card" style="width: 18rem;">';
         echo '<div class="card-header">' . $hotel['name'] . '</div>';
         echo '<ul class="list-group list-group-flush">';
@@ -63,7 +66,10 @@
         echo '<li class="list-group-item">Distanza dal centro: ' . $hotel['distance_to_center'] . ' km</li>';
         echo '</ul>';
         echo '</div>';
+        echo '</div>';
     }
+    echo '</div>';
+    echo '</div>';
 
     ?>
 

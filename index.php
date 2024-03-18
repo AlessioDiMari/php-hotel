@@ -46,14 +46,26 @@
             'parking' => true,
             'vote' => 2,
             'distance_to_center' => 50
-        ],
+        ]
     ];
     ?>
 
-    <h1>PHP Hotel List</h1>    
+    <h1>PHP Hotel List</h1>
+    <?php
+    echo "<ul>";
 
+    foreach ($hotels as $hotel) {
+        echo "<li>";
+        echo "Nome: " . $hotel["name"] . "<br>";
+        echo "Descrizione: " . $hotel["description"] . "<br>";
+        echo "Parcheggio: " . ($hotel['parking'] ? 'Disponibile' : 'Non Disponibile') . "<br>";
+        echo "Voto: " . $hotel["vote"] . "<br>";
+        echo "Distanza dal centro: " . $hotel["distance_to_center"] . " km";
+        echo "</li>";
+    }
+    echo "</ul>"
 
-
+    ?>
 
 
     <!-- Bootstrap -->
